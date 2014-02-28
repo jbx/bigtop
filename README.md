@@ -79,7 +79,7 @@ WARNING: since testing packages requires installing them on a live system it is 
  
 * Step 1: Build the smokes with snapshots.  This ensures that all transitive dependencies etc.. are in your repo
     * mvn clean install -DskipTests -DskipITs -DperformRelease -f ./bigtop-test-framework/pom.xml
-    * mvn clean install -DskipTests -DskipITs -DperformRelease -f ./test-artifacts/pom.xml
+    * mvn clean install -DskipTests -DskipITs -DperformRelease -f ./bigtop-tests/test-artifacts/pom.xml
 * Step 2: Now, rebuild in "offline" mode.  This will make sure that your local changes to bigtop are embeded in the changes.
     * mvn clean install -DskipTests -DskipITs -DperformRelease -o -nsu -f ./bigtop-test-framework/pom.xml
     * mvn clean install -DskipTests -DskipITs -DperformRelease -o -nsu -f ./bigtop-tests/test-artifacts/pom.xml
